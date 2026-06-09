@@ -1,9 +1,12 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Nicholas Adams | Cybersecurity Portfolio</title>
+
   <style>
     * {
       box-sizing: border-box;
@@ -12,7 +15,7 @@
 
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
       background: #020617;
       color: #e5e7eb;
       line-height: 1.6;
@@ -26,12 +29,13 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(2, 6, 23, 0.95);
+      background: rgba(2, 6, 23, 0.96);
       border-bottom: 1px solid #1e293b;
       padding: 14px 8%;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      backdrop-filter: blur(10px);
     }
 
     nav h2 {
@@ -59,7 +63,7 @@
       flex-direction: column;
       justify-content: center;
       background:
-        linear-gradient(rgba(2, 6, 23, 0.83), rgba(2, 6, 23, 0.97)),
+        linear-gradient(rgba(2, 6, 23, 0.86), rgba(2, 6, 23, 0.97)),
         radial-gradient(circle at top right, #0284c7, transparent 35%),
         radial-gradient(circle at bottom left, #0f766e, transparent 30%);
     }
@@ -89,7 +93,7 @@
     }
 
     .tagline {
-      max-width: 900px;
+      max-width: 950px;
       font-size: 1.2rem;
       color: #cbd5e1;
     }
@@ -182,14 +186,16 @@
       border-radius: 999px;
       font-size: 0.88rem;
     }
-.hero-badges {
-  margin: 20px 0;
-}
 
-.hero-badges .pill {
-  background: #0f172a;
-  border: 1px solid #38bdf8;
-}
+    .hero-badges {
+      margin: 20px 0;
+    }
+
+    .hero-badges .pill {
+      background: #0f172a;
+      border: 1px solid #38bdf8;
+    }
+
     .timeline {
       border-left: 2px solid #38bdf8;
       padding-left: 25px;
@@ -207,6 +213,16 @@
     .highlight {
       color: #38bdf8;
       font-weight: bold;
+    }
+
+    .terminal {
+      background: #020617;
+      border: 1px solid #1e293b;
+      border-radius: 18px;
+      padding: 25px;
+      font-family: Consolas, monospace;
+      color: #22c55e;
+      overflow-x: auto;
     }
 
     footer {
@@ -243,25 +259,20 @@
 <nav>
   <h2>Nicholas Adams</h2>
   <div>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
+    <a href="#projects">Labs</a>
     <a href="#certifications">Certifications</a>
+    <a href="#skills">Skills</a>
     <a href="#experience">Experience</a>
     <a href="#contact">Contact</a>
   </div>
 </nav>
 
 <header>
-
-  <span class="badge">
-    Active Secret Clearance • DoD Cybersecurity • Cyber Operations
-  </span>
+  <span class="badge">Active Secret Clearance • DoD Cybersecurity • Cyber Operations</span>
 
   <h1>Nicholas Adams</h1>
 
-  <h3>
-    Cybersecurity Operations | Incident Response | IAM | Systems Administration
-  </h3>
+  <h3>Cybersecurity Analyst • Incident Response • IAM • Vulnerability Management</h3>
 
   <div class="hero-badges">
     <span class="pill">Security+</span>
@@ -273,39 +284,18 @@
   </div>
 
   <p class="tagline">
-    Experienced cybersecurity professional supporting enterprise healthcare and
-    Department of Defense environments through cybersecurity operations,
-    vulnerability management, SIEM monitoring, incident response, identity security,
-    RMF compliance, and infrastructure hardening.
+    I secure mission-critical systems, investigate security risk, harden infrastructure,
+    and build hands-on cybersecurity labs that demonstrate real-world defensive security,
+    identity governance, compliance, and enterprise security operations.
   </p>
 
   <div>
-    <a class="btn"
-       href="documents/Nicholas-Adams-Resume.pdf"
-       target="_blank">
-       Download Resume
-    </a>
-
-    <a class="btn"
-       href="https://github.com/Dreamwreaper"
-       target="_blank">
-       GitHub Labs
-    </a>
-
-    <a class="btn secondary"
-       href="#certifications">
-       Certifications
-    </a>
-
-    <a class="btn secondary"
-       href="#projects">
-       Featured Projects
-    </a>
-
-    <a class="btn secondary"
-       href="mailto:nicholas.m.adams85@gmail.com">
-       Contact Me
-    </a>
+    <a class="btn" href="documents/Nicholas-Adams-Resume.pdf" target="_blank">Download Resume</a>
+    <a class="btn" href="https://github.com/Dreamwreaper" target="_blank">GitHub Labs</a>
+    <a class="btn secondary" href="https://www.linkedin.com/in/nicholas-adams-cciso-611272b3/" target="_blank">LinkedIn Profile</a>
+    <a class="btn secondary" href="#projects">View Projects</a>
+    <a class="btn secondary" href="#certifications">Certifications</a>
+    <a class="btn secondary" href="mailto:nicholas.m.adams85@gmail.com">Contact Me</a>
   </div>
 
   <div class="stats">
@@ -313,14 +303,17 @@
       <h3>13+</h3>
       <p>Years IT Experience</p>
     </div>
+
     <div class="stat">
       <h3>8+</h3>
       <p>Years Cybersecurity</p>
     </div>
+
     <div class="stat">
       <h3>Secret</h3>
       <p>Security Clearance</p>
     </div>
+
     <div class="stat">
       <h3>99.9%</h3>
       <p>System Uptime Supported</p>
@@ -330,18 +323,19 @@
 
 <section id="about">
   <h2>About Me</h2>
+
   <div class="card">
     <p>
-      I specialize in cybersecurity operations, systems administration, vulnerability management, identity security,
-      and compliance-driven security work. My experience includes supporting mission-critical DoD healthcare systems,
-      Windows Server environments, SQL Server, VMware, IIS, Citrix, RDS, SIEM monitoring, Microsoft Defender,
-      Nessus/ACAS, RMF/ATO support, POA&M tracking, and DISA STIG remediation.
+      I am a cybersecurity and systems administration professional with experience supporting
+      Department of Defense healthcare environments, enterprise Windows Server infrastructure,
+      SQL Server, VMware, IIS, Citrix, RDS, SIEM monitoring, Microsoft Defender, Nessus/ACAS,
+      RMF/ATO support, POA&M tracking, DISA STIG remediation, and identity security.
     </p>
 
     <p>
-      My GitHub portfolio was built to show hands-on capability beyond a resume. These labs demonstrate practical
-      work in enterprise security, IAM, Zero Trust, PII compliance, governance, automation, access control, and
-      defensive security operations.
+      This portfolio shows more than resume claims. It documents hands-on labs in enterprise security,
+      identity governance, Zero Trust IAM, PII compliance, automation, access control, and defensive
+      security operations.
     </p>
   </div>
 </section>
@@ -354,56 +348,68 @@
     <div class="card">
       <h3>Enterprise Security Lab</h3>
       <p>
-        Enterprise-style security lab focused on defensive operations, vulnerability analysis, system hardening,
-        security monitoring, and incident response concepts.
+        Enterprise-style security lab focused on defensive operations, vulnerability analysis,
+        hardening, monitoring, and incident response concepts.
       </p>
+
       <span class="pill">Security Monitoring</span>
       <span class="pill">Incident Response</span>
       <span class="pill">Enterprise Security</span>
-      <span class="pill">Windows Server</span>
+      <span class="pill">System Hardening</span>
+
       <br><br>
+
       <a class="btn" href="https://github.com/Dreamwreaper/enterprise-security-lab" target="_blank">Open Lab</a>
     </div>
 
     <div class="card">
       <h3>Identity Governance JML Lab</h3>
       <p>
-        Built Joiner-Mover-Leaver identity lifecycle workflows using Active Directory, PowerShell automation,
-        RBAC, user provisioning, group changes, and deprovisioning.
+        Joiner-Mover-Leaver lifecycle workflows using Active Directory, PowerShell,
+        RBAC, provisioning, group changes, and deprovisioning.
       </p>
+
       <span class="pill">Active Directory</span>
       <span class="pill">PowerShell</span>
       <span class="pill">RBAC</span>
       <span class="pill">JML</span>
+
       <br><br>
+
       <a class="btn" href="https://github.com/Dreamwreaper/identity-governance-jml-lab" target="_blank">Open Lab</a>
     </div>
 
     <div class="card">
       <h3>Zero Trust IAM Auth0 Lab</h3>
       <p>
-        Zero Trust identity lab using Auth0, Microsoft Entra ID concepts, OAuth 2.0, OpenID Connect,
-        MFA, enterprise applications, and least privilege access.
+        Zero Trust identity lab using Auth0, Microsoft Entra ID concepts, OAuth 2.0,
+        OpenID Connect, MFA, and least privilege principles.
       </p>
+
       <span class="pill">Auth0</span>
       <span class="pill">Entra ID</span>
       <span class="pill">OAuth 2.0</span>
       <span class="pill">MFA</span>
+
       <br><br>
+
       <a class="btn" href="https://github.com/Dreamwreaper/zero-trust-iam-auth0-Lab" target="_blank">Open Lab</a>
     </div>
 
     <div class="card">
       <h3>Identity to Governance Lab</h3>
       <p>
-        Connected identity administration to governance outcomes through access reviews, least privilege,
-        lifecycle management, policy documentation, and security control mapping.
+        Connected identity administration to governance outcomes through access reviews,
+        least privilege, lifecycle management, and security control mapping.
       </p>
+
       <span class="pill">IAM</span>
       <span class="pill">Governance</span>
       <span class="pill">Access Review</span>
       <span class="pill">Least Privilege</span>
+
       <br><br>
+
       <a class="btn" href="https://github.com/Dreamwreaper/identity-to-governance-lab" target="_blank">Open Lab</a>
     </div>
 
@@ -411,14 +417,91 @@
       <h3>PII Compliance Audit Lab</h3>
       <p>
         Compliance-focused lab demonstrating privacy controls, PII handling, audit documentation,
-        risk identification, security control alignment, and compliance reporting.
+        risk identification, control alignment, and reporting.
       </p>
+
       <span class="pill">PII</span>
       <span class="pill">NIST</span>
       <span class="pill">Compliance</span>
       <span class="pill">Audit</span>
+
       <br><br>
+
       <a class="btn" href="https://github.com/Dreamwreaper/pii-compliance-audit-lab" target="_blank">Open Lab</a>
+    </div>
+
+  </div>
+</section>
+
+<section id="certifications">
+  <h2>Certifications</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>CompTIA Security+ ce</h3>
+      <p>
+        Validates core cybersecurity knowledge including threats, risk mitigation,
+        identity security, network security, and secure operations.
+      </p>
+
+      <span class="pill">Security+</span>
+      <span class="pill">Cybersecurity</span>
+      <span class="pill">Expires Jan 2027</span>
+
+      <br><br>
+
+      <a class="btn" href="certifications/security-plus.pdf" target="_blank">View Certificate</a>
+    </div>
+
+    <div class="card">
+      <h3>CompTIA CySA+ ce</h3>
+      <p>
+        Cybersecurity analyst certification focused on threat detection, security monitoring,
+        vulnerability management, behavioral analytics, and incident response.
+      </p>
+
+      <span class="pill">CySA+</span>
+      <span class="pill">SOC Analyst</span>
+      <span class="pill">Incident Response</span>
+      <span class="pill">Expires Jan 2027</span>
+
+      <br><br>
+
+      <a class="btn" href="certifications/cysa-plus.pdf" target="_blank">View Certificate</a>
+    </div>
+
+    <div class="card">
+      <h3>CompTIA Security Analytics Professional</h3>
+      <p>
+        Stackable CompTIA credential demonstrating security analytics, defensive operations,
+        cybersecurity monitoring, and analyst-level security capability.
+      </p>
+
+      <span class="pill">CSAP</span>
+      <span class="pill">Security Analytics</span>
+      <span class="pill">Stackable Credential</span>
+
+      <br><br>
+
+      <a class="btn" href="certifications/csap.pdf" target="_blank">View Certificate</a>
+    </div>
+
+    <div class="card">
+      <h3>EC-Council CCISO</h3>
+      <p>
+        Executive cybersecurity certification focused on governance, risk management,
+        security leadership, strategic operations, and information security program management.
+      </p>
+
+      <span class="pill">CCISO</span>
+      <span class="pill">Governance</span>
+      <span class="pill">Security Leadership</span>
+      <span class="pill">Renewable Mar 2027</span>
+
+      <br><br>
+
+      <a class="btn" href="certifications/cciso.pdf" target="_blank">View Certificate</a>
     </div>
 
   </div>
@@ -428,6 +511,7 @@
   <h2>Technical Skills</h2>
 
   <div class="grid">
+
     <div class="card">
       <h3>Cybersecurity Operations</h3>
       <span class="pill">Incident Response</span>
@@ -459,6 +543,7 @@
       <span class="pill">OpenID Connect</span>
       <span class="pill">RBAC</span>
       <span class="pill">MFA</span>
+      <span class="pill">JML Automation</span>
     </div>
 
     <div class="card">
@@ -482,6 +567,25 @@
       <span class="pill">HIPAA</span>
       <span class="pill">Zero Trust</span>
     </div>
+
+  </div>
+</section>
+
+<section id="developer-view">
+  <h2>Developer View</h2>
+
+  <div class="terminal">
+    <p>$ whoami</p>
+    <p>Nicholas Adams — Cybersecurity Analyst | IAM | Incident Response | Systems Administration</p>
+
+    <p>$ focus</p>
+    <p>Cyber Operations • Identity Governance • Vulnerability Management • RMF • Enterprise Security</p>
+
+    <p>$ certifications</p>
+    <p>Security+ • CySA+ • CSAP • CCISO</p>
+
+    <p>$ mission</p>
+    <p>Secure systems. Reduce risk. Defend enterprise environments. Build proof through hands-on labs.</p>
   </div>
 </section>
 
@@ -489,15 +593,17 @@
   <h2>Experience Snapshot</h2>
 
   <div class="timeline">
+
     <div class="timeline-item">
       <h3>DoD Cybersecurity & Systems Administration</h3>
       <p>
-        Supported mission-critical healthcare systems across Windows Server, VMware, SQL Server, IIS, Citrix,
-        RDS, and enterprise security environments.
+        Supported mission-critical healthcare systems across Windows Server, VMware, SQL Server,
+        IIS, Citrix, RDS, and enterprise security environments.
       </p>
       <p>
         <span class="highlight">Impact:</span> Supported 99.9% uptime, reduced unresolved vulnerabilities,
-        maintained system security posture, supported RMF/ATO activities, and helped secure regulated DoD healthcare operations.
+        maintained system security posture, supported RMF/ATO activities, and helped secure regulated
+        DoD healthcare operations.
       </p>
     </div>
 
@@ -516,68 +622,30 @@
         Entra ID, PII compliance, access control, automation, and security documentation.
       </p>
     </div>
-  </div>
-</section>
-<section id="certifications">
-  <h2>Certifications</h2>
-
-  <div class="grid">
-
-    <div class="card cert-card">
-      <h3>CompTIA Security+ ce</h3>
-      <p>
-        Foundational cybersecurity certification validating security concepts, threat management,
-        risk mitigation, network security, identity security, and secure operations.
-      </p>
-      <span class="pill">Security+</span>
-      <span class="pill">Cybersecurity</span>
-      <span class="pill">Expires Jan 2027</span>
-    </div>
-
-    <div class="card cert-card">
-      <h3>CompTIA CySA+ ce</h3>
-      <p>
-        Cybersecurity analyst certification focused on security monitoring, threat detection,
-        vulnerability management, incident response, and behavioral analytics.
-      </p>
-      <span class="pill">CySA+</span>
-      <span class="pill">SOC Analyst</span>
-      <span class="pill">Incident Response</span>
-      <span class="pill">Expires Jan 2027</span>
-    </div>
-
-    <div class="card cert-card">
-      <h3>CompTIA Security Analytics Professional</h3>
-      <p>
-        Stackable CompTIA credential earned through Security+ and CySA+, demonstrating security analytics,
-        defensive operations, and cybersecurity monitoring capability.
-      </p>
-      <span class="pill">CSAP</span>
-      <span class="pill">Security Analytics</span>
-      <span class="pill">Stackable Credential</span>
-    </div>
-
-    <div class="card cert-card">
-      <h3>EC-Council CCISO</h3>
-      <p>
-        Executive-level cybersecurity certification focused on security leadership, governance,
-        risk management, strategic security operations, and information security program management.
-      </p>
-      <span class="pill">CCISO</span>
-      <span class="pill">Security Leadership</span>
-      <span class="pill">Governance</span>
-      <span class="pill">Renewable Mar 2027</span>
-    </div>
 
   </div>
 </section>
+
 <section id="contact">
   <h2>Contact</h2>
 
   <div class="card">
-    <p><strong>Email:</strong> <a href="mailto:nicholas.m.adams85@gmail.com">nicholas.m.adams85@gmail.com</a></p>
-    <p><strong>GitHub:</strong> <a href="https://github.com/Dreamwreaper" target="_blank">github.com/Dreamwreaper</a></p>
-    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/" target="_blank">Replace this with your real LinkedIn link</a></p>
+    <p>
+      <strong>Email:</strong>
+      <a href="mailto:nicholas.m.adams85@gmail.com">nicholas.m.adams85@gmail.com</a>
+    </p>
+
+    <p>
+      <strong>GitHub:</strong>
+      <a href="https://github.com/Dreamwreaper" target="_blank">github.com/Dreamwreaper</a>
+    </p>
+
+    <p>
+      <strong>LinkedIn:</strong>
+      <a href="https://www.linkedin.com/in/nicholas-adams-cciso-611272b3/" target="_blank">
+        Nicholas Adams | LinkedIn
+      </a>
+    </p>
   </div>
 </section>
 
@@ -587,3 +655,4 @@
 
 </body>
 </html>
+```
