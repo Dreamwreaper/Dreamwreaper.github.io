@@ -3,14 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Nicholas Adams | Cybersecurity Portfolio</title>
 
   <style>
-    * {
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
+    * { box-sizing: border-box; scroll-behavior: smooth; }
 
     body {
       margin: 0;
@@ -20,9 +16,7 @@
       line-height: 1.6;
     }
 
-    a {
-      color: inherit;
-    }
+    a { color: inherit; }
 
     nav {
       position: sticky;
@@ -44,16 +38,14 @@
     }
 
     nav a {
-      margin-left: 18px;
+      margin-left: 16px;
       text-decoration: none;
       color: #e5e7eb;
       font-weight: bold;
-      font-size: 0.95rem;
+      font-size: 0.92rem;
     }
 
-    nav a:hover {
-      color: #38bdf8;
-    }
+    nav a:hover { color: #38bdf8; }
 
     header {
       min-height: 92vh;
@@ -87,7 +79,7 @@
 
     header h3 {
       color: #38bdf8;
-      font-size: clamp(1.2rem, 4vw, 1.8rem);
+      font-size: clamp(1.15rem, 4vw, 1.75rem);
       margin: 18px 0;
     }
 
@@ -120,9 +112,7 @@
       border: 1px solid #38bdf8;
     }
 
-    section {
-      padding: 70px 8%;
-    }
+    section { padding: 70px 8%; }
 
     h2 {
       color: #38bdf8;
@@ -130,19 +120,25 @@
       margin-bottom: 25px;
     }
 
-    .stats {
+    .stats, .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-      gap: 18px;
-      margin-top: 35px;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 22px;
+    }
+
+    .stats { margin-top: 35px; }
+
+    .stat, .card {
+      background: #0f172a;
+      border: 1px solid #1e293b;
+      border-radius: 18px;
+      padding: 24px;
+      transition: 0.25s ease;
     }
 
     .stat {
-      background: rgba(15, 23, 42, 0.9);
-      border: 1px solid #1e293b;
-      border-radius: 16px;
-      padding: 22px;
       text-align: center;
+      background: rgba(15, 23, 42, 0.9);
     }
 
     .stat h3 {
@@ -151,22 +147,8 @@
       font-size: 2rem;
     }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
-      gap: 24px;
-    }
-
-    .card {
-      background: #0f172a;
-      border: 1px solid #1e293b;
-      border-radius: 18px;
-      padding: 25px;
-      transition: 0.25s ease;
-    }
-
     .card:hover {
-      transform: translateY(-6px);
+      transform: translateY(-5px);
       border-color: #38bdf8;
       box-shadow: 0 0 25px rgba(56, 189, 248, 0.15);
     }
@@ -186,9 +168,7 @@
       font-size: 0.88rem;
     }
 
-    .hero-badges {
-      margin: 20px 0;
-    }
+    .hero-badges { margin: 20px 0; }
 
     .hero-badges .pill {
       background: #0f172a;
@@ -200,9 +180,7 @@
       padding-left: 25px;
     }
 
-    .timeline-item {
-      margin-bottom: 28px;
-    }
+    .timeline-item { margin-bottom: 30px; }
 
     .timeline-item h3 {
       color: #ffffff;
@@ -219,6 +197,16 @@
       overflow-x: auto;
     }
 
+    ul { padding-left: 22px; }
+
+    li { margin-bottom: 8px; }
+
+    hr {
+      border: none;
+      border-top: 1px solid #334155;
+      margin: 25px 0;
+    }
+
     footer {
       text-align: center;
       padding: 35px;
@@ -228,22 +216,10 @@
     }
 
     @media (max-width: 760px) {
-      nav {
-        flex-direction: column;
-        gap: 10px;
-      }
-
-      nav a {
-        margin: 6px;
-      }
-
-      section {
-        padding: 55px 6%;
-      }
-
-      header {
-        padding: 75px 6%;
-      }
+      nav { flex-direction: column; gap: 10px; }
+      nav a { margin: 6px; }
+      section { padding: 55px 6%; }
+      header { padding: 75px 6%; }
     }
   </style>
 </head>
@@ -254,8 +230,9 @@
   <h2>Nicholas Adams</h2>
   <div>
     <a href="#about">About</a>
+    <a href="#impact">Impact</a>
     <a href="#projects">Labs</a>
-    <a href="#certifications">Certifications</a>
+    <a href="#certifications">Certs</a>
     <a href="#skills">Skills</a>
     <a href="#experience">Experience</a>
     <a href="#resume">Resume</a>
@@ -264,14 +241,14 @@
 </nav>
 
 <header>
-  <span class="badge">Active Secret Clearance • DoD Healthcare • Cybersecurity • IAM • Systems Administration</span>
+  <span class="badge">Active Secret Clearance • DoD Healthcare • Cybersecurity • IAM • RMF/ATO</span>
 
   <h1>Nicholas Adams</h1>
 
   <h3>
-    Lead Cybersecurity Analyst • Systems Administrator • Assistant Program Manager
+    Lead Cybersecurity Analyst • Lead Systems Administrator • Assistant Program Manager
     <br>
-    IAM • SQL Server Administration • RMF Compliance
+    Identity & Access Management • SQL Server Administration • RMF/ATO Sustainment
   </h3>
 
   <div class="hero-badges">
@@ -283,30 +260,30 @@
     <span class="pill">8+ Years Cybersecurity</span>
     <span class="pill">IAM</span>
     <span class="pill">SQL Server</span>
-    <span class="pill">RMF</span>
+    <span class="pill">RMF/ATO</span>
     <span class="pill">PKI</span>
   </div>
 
   <p class="tagline">
-    I built my career in environments where one person had to perform the work of multiple teams.
-    My experience spans cybersecurity operations, identity and access management, systems administration,
-    SQL Server administration, PKI, RMF compliance, application support, data analysis, automation,
-    and operational leadership supporting mission-critical DoD healthcare systems.
+    Multi-disciplinary cybersecurity and enterprise IT professional with hands-on experience across
+    cybersecurity operations, IAM, systems administration, SQL Server administration, RMF/ATO sustainment,
+    PKI, vulnerability management, application support, data analysis, automation, and operational leadership
+    in mission-critical DoD healthcare environments.
   </p>
 
   <div>
-    <a class="btn" href="#resume">View Master Resume</a>
+    <a class="btn" href="Nicholas-Adams-Master-Resume.docx" target="_blank">Download Resume</a>
+    <a class="btn" href="#resume">View Resume</a>
     <a class="btn" href="https://github.com/Dreamwreaper" target="_blank">GitHub Labs</a>
-    <a class="btn secondary" href="https://www.linkedin.com/in/nicholas-adams-cciso-611272b3/" target="_blank">LinkedIn Profile</a>
-    <a class="btn secondary" href="#certifications">Certifications</a>
+    <a class="btn secondary" href="https://www.linkedin.com/in/nicholas-adams-cciso-611272b3/" target="_blank">LinkedIn</a>
     <a class="btn secondary" href="mailto:nicholas.m.adams85@gmail.com">Contact Me</a>
   </div>
 
   <div class="stats">
     <div class="stat"><h3>13+</h3><p>Years IT Experience</p></div>
     <div class="stat"><h3>8+</h3><p>Years Cybersecurity</p></div>
-    <div class="stat"><h3>Secret</h3><p>Security Clearance</p></div>
-    <div class="stat"><h3>99.9%</h3><p>System Uptime Supported</p></div>
+    <div class="stat"><h3>5,000+</h3><p>Users Supported</p></div>
+    <div class="stat"><h3>99.9%</h3><p>System Availability Supported</p></div>
   </div>
 </header>
 
@@ -315,7 +292,7 @@
 
   <div class="card">
     <p>
-      My career was built in short-staffed, mission-critical environments where I had to learn and perform across multiple technical areas at the same time. I was not limited to one narrow role. I supported cybersecurity operations, identity access, infrastructure, databases, applications, compliance, and project coordination because the mission required it.
+      My career was built in short-staffed, mission-critical environments where I had to operate across multiple technical lanes at the same time. I was not limited to one narrow job function. I supported cybersecurity operations, identity access, infrastructure, databases, applications, RMF compliance, and project coordination because the mission required it.
     </p>
 
     <p>
@@ -325,10 +302,42 @@
     <p>
       My background connects cybersecurity and infrastructure together. I understand how systems are built, how identities are managed, how vulnerabilities are remediated, how databases support applications, how certificates secure access, and how compliance requirements tie back to real operational risk.
     </p>
+  </div>
+</section>
 
-    <p>
-      This portfolio shows proof of work through enterprise security, identity governance, Zero Trust IAM, PII compliance, access control, automation, and defensive security labs.
-    </p>
+<section id="impact">
+  <h2>Real-World Impact</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>DoD Healthcare Systems</h3>
+      <p>Supported mission-critical EHR and ECT environments serving thousands of users across regulated healthcare systems.</p>
+    </div>
+
+    <div class="card">
+      <h3>RMF / ATO Sustainment</h3>
+      <p>Supported eMASS documentation, POA&M tracking, security artifacts, compliance reporting, audit readiness, and ATO sustainment.</p>
+    </div>
+
+    <div class="card">
+      <h3>IAM & Access Governance</h3>
+      <p>Managed RBAC, access reviews, provisioning, deprovisioning, identity troubleshooting, least privilege, CAC authentication, and PKI controls.</p>
+    </div>
+
+    <div class="card">
+      <h3>SQL Server & Data</h3>
+      <p>Developed SQL queries, reports, stored procedures, backups, restores, recovery testing, data analysis, and operational reporting.</p>
+    </div>
+
+    <div class="card">
+      <h3>Vulnerability Management</h3>
+      <p>Performed ACAS/Nessus assessments, reviewed findings, prioritized remediation, validated fixes, and supported recurring security reporting.</p>
+    </div>
+
+    <div class="card">
+      <h3>Assistant Program Management</h3>
+      <p>Supported operational planning, customer communication, reporting, sustainment coordination, change windows, and project execution.</p>
+    </div>
   </div>
 </section>
 
@@ -336,13 +345,9 @@
   <h2>Featured Cybersecurity Labs</h2>
 
   <div class="grid">
-
     <div class="card">
       <h3>Enterprise Security Lab</h3>
-      <p>
-        Enterprise-style security lab focused on defensive operations, vulnerability analysis,
-        system hardening, security monitoring, and incident response concepts.
-      </p>
+      <p>Enterprise security lab focused on defensive operations, vulnerability analysis, system hardening, monitoring, and incident response concepts.</p>
       <span class="pill">Security Monitoring</span>
       <span class="pill">Incident Response</span>
       <span class="pill">Enterprise Security</span>
@@ -352,10 +357,7 @@
 
     <div class="card">
       <h3>Identity Governance JML Lab</h3>
-      <p>
-        Joiner-Mover-Leaver lifecycle workflows using Active Directory, PowerShell automation,
-        RBAC, provisioning, group changes, access governance, and deprovisioning.
-      </p>
+      <p>Joiner-Mover-Leaver lifecycle workflows using Active Directory, PowerShell automation, RBAC, provisioning, access governance, and deprovisioning.</p>
       <span class="pill">Active Directory</span>
       <span class="pill">PowerShell</span>
       <span class="pill">RBAC</span>
@@ -366,10 +368,7 @@
 
     <div class="card">
       <h3>Zero Trust IAM Auth0 Lab</h3>
-      <p>
-        Zero Trust identity lab using Auth0, Microsoft Entra ID concepts, OAuth 2.0,
-        OpenID Connect, MFA, enterprise applications, and least privilege access.
-      </p>
+      <p>Zero Trust identity lab using Auth0, Microsoft Entra ID concepts, OAuth 2.0, OIDC, MFA, enterprise applications, and least privilege access.</p>
       <span class="pill">Auth0</span>
       <span class="pill">Entra ID</span>
       <span class="pill">OAuth 2.0</span>
@@ -380,10 +379,7 @@
 
     <div class="card">
       <h3>Identity to Governance Lab</h3>
-      <p>
-        Connected identity administration to governance outcomes through access reviews,
-        least privilege, lifecycle management, policy documentation, and security control mapping.
-      </p>
+      <p>Access reviews, least privilege, lifecycle management, policy documentation, role management, and security control mapping.</p>
       <span class="pill">IAM</span>
       <span class="pill">Governance</span>
       <span class="pill">Access Review</span>
@@ -393,10 +389,7 @@
 
     <div class="card">
       <h3>PII Compliance Audit Lab</h3>
-      <p>
-        Compliance-focused lab demonstrating privacy controls, PII handling, audit documentation,
-        risk identification, security control alignment, and compliance reporting.
-      </p>
+      <p>Compliance-focused lab demonstrating privacy controls, PII handling, audit documentation, risk identification, and compliance reporting.</p>
       <span class="pill">PII</span>
       <span class="pill">NIST</span>
       <span class="pill">Compliance</span>
@@ -404,7 +397,6 @@
       <br><br>
       <a class="btn" href="https://github.com/Dreamwreaper/pii-compliance-audit-lab" target="_blank">Open Lab</a>
     </div>
-
   </div>
 </section>
 
@@ -412,13 +404,9 @@
   <h2>Certifications</h2>
 
   <div class="grid">
-
     <div class="card">
       <h3>CompTIA Security+ ce</h3>
-      <p>
-        Validates core cybersecurity knowledge including risk management, network security,
-        identity management, cryptography, and secure operations.
-      </p>
+      <p>Validates core cybersecurity knowledge including risk management, network security, identity management, cryptography, and secure operations.</p>
       <span class="pill">Security+</span>
       <span class="pill">Cybersecurity</span>
       <br><br>
@@ -427,22 +415,16 @@
 
     <div class="card">
       <h3>CompTIA CySA+ ce</h3>
-      <p>
-        Cybersecurity Analyst certification focused on threat detection, incident response,
-        security monitoring, and vulnerability management.
-      </p>
+      <p>Cybersecurity Analyst certification focused on threat detection, incident response, security monitoring, and vulnerability management.</p>
       <span class="pill">CySA+</span>
-      <span class="pill">SOC Analyst</span>
+      <span class="pill">Security Analytics</span>
       <br><br>
       <a class="btn" href="CompTIA CySA+ ce certificate (1) (1).pdf" target="_blank">View Certificate</a>
     </div>
 
     <div class="card">
-      <h3>CompTIA Security Analytics Professional (CSAP)</h3>
-      <p>
-        Stackable credential demonstrating cybersecurity analytics, monitoring,
-        and defensive security operations expertise.
-      </p>
+      <h3>CompTIA Security Analytics Professional</h3>
+      <p>Stackable credential demonstrating cybersecurity analytics, monitoring, and defensive security operations expertise.</p>
       <span class="pill">CSAP</span>
       <span class="pill">Security Analytics</span>
       <br><br>
@@ -451,16 +433,12 @@
 
     <div class="card">
       <h3>EC-Council CCISO</h3>
-      <p>
-        Executive-level cybersecurity certification focused on governance, risk management,
-        strategic security leadership, and information security program oversight.
-      </p>
+      <p>Executive-level cybersecurity certification focused on governance, risk management, strategic security leadership, and program oversight.</p>
       <span class="pill">CCISO</span>
       <span class="pill">Governance</span>
       <br><br>
       <a class="btn" href="ECC-CISO-ANSI-Certificate.pdf" target="_blank">View Certificate</a>
     </div>
-
   </div>
 </section>
 
@@ -468,12 +446,11 @@
   <h2>Technical Skills</h2>
 
   <div class="grid">
-
     <div class="card">
       <h3>Cybersecurity Operations</h3>
       <span class="pill">Security Monitoring</span>
       <span class="pill">Incident Investigation</span>
-      <span class="pill">Incident Response</span>
+      <span class="pill">Incident Response Support</span>
       <span class="pill">Vulnerability Management</span>
       <span class="pill">ACAS</span>
       <span class="pill">Nessus</span>
@@ -539,7 +516,6 @@
       <span class="pill">HIPAA</span>
       <span class="pill">Zero Trust</span>
     </div>
-
   </div>
 </section>
 
@@ -547,7 +523,6 @@
   <h2>Experience Snapshot</h2>
 
   <div class="timeline">
-
     <div class="timeline-item">
       <h3>Ardent Technologies — DoD Contractor</h3>
       <p><strong>Lead Cybersecurity Analyst | Lead Systems Administrator | Assistant Program Manager</strong></p>
@@ -567,7 +542,6 @@
         patching, compliance activities, and Tier II/III enterprise support.
       </p>
     </div>
-
   </div>
 </section>
 
@@ -576,10 +550,10 @@
 
   <div class="terminal">
     <p>$ whoami</p>
-    <p>Nicholas Adams — Lead Cybersecurity Analyst | Systems Administrator | Assistant PM | IAM | SQL Server</p>
+    <p>Nicholas Adams — Lead Cybersecurity Analyst | Lead Systems Administrator | Assistant PM | IAM | SQL Server</p>
 
     <p>$ focus</p>
-    <p>Cybersecurity Operations • IAM • Enterprise Systems • SQL Server • PKI • RMF • Data Analysis</p>
+    <p>Cybersecurity Operations • IAM • Enterprise Systems • SQL Server • PKI • RMF/ATO • Data Analysis</p>
 
     <p>$ certifications</p>
     <p>Security+ • CySA+ • CSAP • CCISO • Active Secret Clearance</p>
@@ -592,14 +566,15 @@
 <section id="resume">
   <h2>Professional Resume</h2>
 
-  <div class="card">
+  <a class="btn" href="Nicholas-Adams-Master-Resume.docx" target="_blank">Download Full Resume</a>
 
+  <div class="card">
     <h3>Nicholas M. Adams</h3>
 
     <p>
       <strong>
-      Lead Cybersecurity Analyst | Lead Systems Administrator | Assistant Program Manager |
-      Identity & Access Management | SQL Server Administration | RMF Compliance
+        Lead Cybersecurity Analyst | Lead Systems Administrator | Assistant Program Manager |
+        Identity & Access Management | SQL Server Administration | RMF/ATO Sustainment
       </strong>
     </p>
 
@@ -614,36 +589,33 @@
 
     <p>
       Cybersecurity, Identity & Access Management, Systems Administration, SQL Server Administration,
-      and Infrastructure professional with 13+ years of Information Technology experience and 8+ years
+      and Infrastructure Security professional with 13+ years of Information Technology experience and 8+ years
       supporting Department of Defense healthcare environments.
     </p>
 
     <p>
       Active Secret Security Clearance holder with hands-on experience supporting mission-critical healthcare
       systems through cybersecurity operations, identity governance, access administration, SQL database
-      administration, PKI management, enterprise infrastructure support, RMF compliance, vulnerability remediation,
+      administration, PKI management, enterprise infrastructure support, RMF/ATO sustainment, vulnerability remediation,
       disaster recovery planning, application administration, data analysis, automation, and operational leadership.
     </p>
 
     <p>
-      In short-staffed environments, routinely performed responsibilities spanning cybersecurity, systems
+      In resource-constrained environments, routinely performed responsibilities spanning cybersecurity, systems
       administration, identity administration, SQL administration, application support, compliance management,
       and project coordination, providing end-to-end support for critical healthcare platforms serving thousands
       of users.
     </p>
 
     <h3>Ardent Technologies — DoD Contractor</h3>
-
-    <p>
-      <strong>Lead Cybersecurity Analyst | Lead Systems Administrator | Assistant Program Manager</strong>
-    </p>
-
+    <p><strong>Lead Cybersecurity Analyst | Lead Systems Administrator | Assistant Program Manager</strong></p>
     <p><em>June 2022 – June 2025</em></p>
 
     <ul>
       <li>Supported mission-critical DoD healthcare systems serving 5,000+ users.</li>
       <li>Led cybersecurity and systems administration support for EHR and ECT environments.</li>
       <li>Assisted program leadership with operational planning, reporting, customer communication, project coordination, sustainment activities, and mission support.</li>
+      <li>Owned RMF/ATO sustainment activities including eMASS maintenance, POA&M tracking, artifact collection, compliance reporting, and audit readiness.</li>
       <li>Managed IAM activities including RBAC enforcement, access reviews, account lifecycle support, privileged access support, least privilege, and identity governance processes.</li>
       <li>Supported user provisioning, deprovisioning, role changes, group management, access validation, and identity-related troubleshooting.</li>
       <li>Administered Active Directory, Group Policy, Microsoft Entra ID concepts, MFA, CAC authentication, PKI certificates, SSL/TLS certificates, and secure authentication controls.</li>
@@ -660,11 +632,7 @@
     </ul>
 
     <h3>Resource Metrix — DoD Contractor</h3>
-
-    <p>
-      <strong>Systems Administrator | Lead Cybersecurity Analyst | Help Desk Lead</strong>
-    </p>
-
+    <p><strong>Systems Administrator | Lead Cybersecurity Analyst | Help Desk Lead</strong></p>
     <p><em>January 2018 – June 2022</em></p>
 
     <ul>
@@ -673,16 +641,16 @@
       <li>Managed IAM processes including user provisioning, deprovisioning, RBAC controls, group administration, access reviews, account troubleshooting, and lifecycle management.</li>
       <li>Supported CAC authentication, certificate validation, access control enforcement, and identity-related troubleshooting across secure healthcare application environments.</li>
       <li>Conducted ACAS/Nessus vulnerability scanning, remediation tracking, patch management, and compliance support.</li>
+      <li>Identified and remediated 200+ vulnerabilities through structured patch governance and configuration validation.</li>
       <li>Supported RMF continuous monitoring, HIPAA compliance, POA&M updates, security documentation, and audit evidence collection.</li>
       <li>Created and maintained SQL queries, stored procedures, reports, and database objects supporting healthcare operations.</li>
       <li>Performed SQL Server backup validation, restores, recovery testing, maintenance, and performance troubleshooting.</li>
       <li>Supported EHR, ECT, MiPACS, JLV, HAIMS, and related DoD healthcare application environments.</li>
       <li>Reviewed logs, restarted critical services, resolved outages, supported patching, and maintained system availability.</li>
-      <li>Led Tier II and Tier III help desk operations supporting enterprise users and reducing escalations through documentation and training.</li>
+      <li>Led Tier II and Tier III help desk operations supporting enterprise users and improving operational procedures.</li>
     </ul>
 
     <h3>Technical Skills</h3>
-
     <p>
       Cybersecurity Operations • Incident Investigation • Vulnerability Management • ACAS • Nessus • Microsoft Defender •
       Trellix SIEM • DISA STIGs • RMF • NIST 800-53 • eMASS • POA&M • ATO Sustainment • HIPAA •
@@ -693,7 +661,6 @@
     </p>
 
     <h3>Cybersecurity Portfolio Labs</h3>
-
     <ul>
       <li>Enterprise Security Lab</li>
       <li>Identity Governance & JML Automation Lab</li>
@@ -703,19 +670,10 @@
     </ul>
 
     <h3>Education</h3>
-
-    <p>
-      <strong>Western Governors University</strong><br>
-      MBA – Information Technology Management
-    </p>
-
-    <p>
-      <strong>Mercer University</strong><br>
-      Bachelor of Science – Informatics
-    </p>
+    <p><strong>Western Governors University</strong><br>MBA – Information Technology Management</p>
+    <p><strong>Mercer University</strong><br>Bachelor of Science – Informatics</p>
 
     <h3>Certifications</h3>
-
     <ul>
       <li>CompTIA Security+ CE</li>
       <li>CompTIA CySA+ CE</li>
@@ -723,7 +681,6 @@
       <li>EC-Council Certified Chief Information Security Officer (CCISO)</li>
       <li>Active Secret Security Clearance</li>
     </ul>
-
   </div>
 </section>
 
@@ -735,7 +692,7 @@
 
     <p>
       Open to cybersecurity, IAM, SOC, SQL Server Administrator, Systems Administrator,
-      Security Analyst, Vulnerability Analyst, RMF, and project coordination opportunities.
+      Security Analyst, Vulnerability Analyst, RMF/ISSO, and project coordination opportunities.
     </p>
 
     <p>
